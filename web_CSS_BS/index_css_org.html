@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Web CSS!</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 		integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		/*
+			- De arriba hacia Abajo
+			- Jararquia de los Selectores
+				- Primer selector es !important
+				- Segundo selector es style inline
+				- Tercer selector es el ID
+				- Cuarto selector es la Clase
+				- Quinto selector es la etiqueta
+		*/
+
+		/*.navbar{
+			background-color: blue !important;
+		}
+
+		#id-navbar{
+			background-color: teal;
+		}*/
+
+		.navbar {
+			background-color: #343a40;
+			padding: 10px 20px;
+			color: #fff;
+		}
+
+		/*nav{
+			background-color: pink;
+		}*/
+
+		.navbar .container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.navbar-brand {
+			font-size: 1.5rem;
+			color: #fff;
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+		}
+
+		.navbar-brand i {
+			margin-left: 5px;
+			color: #61dafb;
+		}
+
+		.collapse {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
+
+		.navbar-nav {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			gap: 15px;
+		}
+
+		.nav-item {
+			margin: 0;
+		}
+
+		.nav-link {
+			text-decoration: none;
+			color: #fff;
+			font-size: 1rem;
+			transition: color 0.3s ease;
+		}
+
+		.nav-link:hover {
+			color: #61dafb;
+		}
+
+		.btn {
+			border: 1px solid #61dafb;
+			color: #61dafb;
+			padding: 5px 10px;
+			background: transparent;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 0.875rem;
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+
+		.btn i {
+			font-size: 1rem;
+		}
+
+		.btn:hover {
+			background-color: #61dafb;
+			color: red;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		.table {
+			width: 100%;
+			text-align: center;
+			border: 1px solid #000;
+			margin-top: 25px;
+		}
+
+		/*.table th {
+			border-bottom: 1px solid #000;
+		}
+
+		.table td {
+			border-bottom: 1px solid #000;
+		}*/
+
+		table,
+		th,
+		td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+
+		.card {
+			border: 1px solid #000;
+			margin-top: 20px;
+		}
+
+		.card .btn {
+			color: white;
+			padding: 5px 10px;
+			background-color: blue;
+			border-radius: 5px;
+			font-size: 0.875rem;
+			text-decoration: none;
+			width: 100px;
+		}
+
+		.footer {
+			text-align: center;
+			margin-top: 25px;
+			background-color: teal;
+			padding: 10px;
+		}
+
+		.footer a {
+			color: white;
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- <nav class="navbar" id="id-navbar" style="background-color: green;"> -->
+	<nav class="navbar" id="id-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				OCHOA <i class="fa-brands fa-php fa-xl"></i>
+			</a>
+			<div class="collapse" id="menu">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Productos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Servicios</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+				</ul>
+				<span>
+					<button class="btn"><i class="fa-regular fa-user"></i> Login</button>
+				</span>
+			</div>
+		</div>
+	</nav>
+
+	<div>
+		<img src="banner.jpg" alt="Banner">
+	</div>
+
+	<div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Nombre</th>
+					<th>Teléfono</th>
+					<th>Email</th>
+					<th> Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Carlos Ochoa</td>
+					<td>653896789</td>
+					<td>ochoa@gmail.com</td>
+					<td>
+						<button>
+							<i class="fa-solid fa-thumbs-up"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-pen"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-xmark"></i>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Carlos Ochoa</td>
+					<td>653896789</td>
+					<td>ochoa@gmail.com</td>
+					<td>
+						<button>
+							<i class="fa-solid fa-thumbs-up"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-pen"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-xmark"></i>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Carlos Ochoa</td>
+					<td>653896789</td>
+					<td>ochoa@gmail.com</td>
+					<td>
+						<button>
+							<i class="fa-solid fa-thumbs-up"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-pen"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-xmark"></i>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Carlos Ochoa</td>
+					<td>653896789</td>
+					<td>ochoa@gmail.com</td>
+					<td>
+						<button>
+							<i class="fa-solid fa-thumbs-up"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-pen"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-xmark"></i>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Carlos Ochoa</td>
+					<td>653896789</td>
+					<td>ochoa@gmail.com</td>
+					<td>
+						<button>
+							<i class="fa-solid fa-thumbs-up"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-pen"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-xmark"></i>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Carlos Ochoa</td>
+					<td>653896789</td>
+					<td>ochoa@gmail.com</td>
+					<td>
+						<button>
+							<i class="fa-solid fa-thumbs-up"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-pen"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-xmark"></i>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>Carlos Ochoa</td>
+					<td>653896789</td>
+					<td>ochoa@gmail.com</td>
+					<td>
+						<button>
+							<i class="fa-solid fa-thumbs-up"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-pen"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-xmark"></i>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>Carlos Ochoa</td>
+					<td>653896789</td>
+					<td>ochoa@gmail.com</td>
+					<td>
+						<button>
+							<i class="fa-solid fa-thumbs-up"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-pen"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-xmark"></i>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>Carlos Ochoa</td>
+					<td>653896789</td>
+					<td>ochoa@gmail.com</td>
+					<td>
+						<button>
+							<i class="fa-solid fa-thumbs-up"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-pen"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-xmark"></i>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>Carlos Ochoa</td>
+					<td>653896789</td>
+					<td>ochoa@gmail.com</td>
+					<td>
+						<button>
+							<i class="fa-solid fa-thumbs-up"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-pen"></i>
+						</button>
+						<button>
+							<i class="fa-solid fa-user-xmark"></i>
+						</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div>
+		<div class="card">
+			<h5>Un curso diferente!</h5>
+			<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Ut aspernatur quos, ex quae. Voluptatum
+				consequatur alias porro doloribus optio perspiciatis, dignissimos cumque iste, saepe quaerat corrupti
+				odit numquam! Earum, rem.</p>
+			<a href="#" class="btn">Ir al Curso</a>
+		</div>
+	</div>
+
+	<footer class="footer" name="footer" id="footer">
+		<div>
+			Copyright - Carlos Ochoa 2025 -
+			<a href="#">https://ochoa.es</a>
+		</div>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+CamelCase = esteEsMiCamelCase
+SnakeCase = este_es_mi_snake_case
+GuionCase = este-es-mi-guion-case
+
+PHP Fiddle => https://onecompiler.com/php
+
+- Jerarquía de Estilos
+    - Estilo va de Arriba hacia Abajo
+    - Primero Estilo en Linea
+    - Segundo Embebido, etiqueta style
+    - Tercero Archivo Externo
+    - CDN
+
+- Jararquia de los Selectores
+    - Primer selector es !important
+    - Segundo selector es style inline
+    - Tercer selector es el ID
+    - Cuarto selector es la Clase
+    - Quinto selector es la etiqueta
+
+Entrar en carpeta = nombre_carpeta/$
+Nivel superior = ../$
